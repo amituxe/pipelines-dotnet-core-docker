@@ -19,11 +19,13 @@ stages:
     displayName: Build
     pool:
       vmImage: 'ubuntu-latest'
+    variables:
+      imageName: 'pipelines-dotnet-docker'
     steps:
     - task: Docker@2
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: 'pipelinedocker'
+        dockerfile: 'Dockerfile'
         tags: |
           $(tag)
