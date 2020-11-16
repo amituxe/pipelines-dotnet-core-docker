@@ -27,6 +27,6 @@ stages:
       inputs:
         command: build
         dockerfile: 'Dockerfile'
-        containerRegistry: amituxContainerRegistry
+        containerRegistry: 'amituxContainerRegistry'
         tags: |
           $(tag)
